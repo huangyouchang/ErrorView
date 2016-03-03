@@ -13,6 +13,7 @@ A custom view that displays an error image, a title, and a subtitle given an HTT
 ```groovy
     compile 'com.github.xiprox.errorview:library:2.+'
 ````
+**Note:** It's safe to use a `+` sign after the major version number. There won't be any backwards incompatible changes within the same version number. If such a change is to happen, major version number will be incremented and this file will be updated. This means that you can safely use the `+` sign without having to worry about your builds breaking.
 
 ###Set the error by HTTP Status Code
 You just need to pass your HTTP status code using `setError(int)` and ErrorView will show the associated error description for you.
