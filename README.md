@@ -8,20 +8,20 @@ A custom view that displays an error image, a title, and a subtitle given an HTT
 <img src="/graphics/screenshots/ss_01.png" />
 </p>
 
-#Usage
-###Add as a dependency
+# Usage
+### Add as a dependency
 ```groovy
     compile 'com.github.xiprox.errorview:library:2.+'
 ````
 **Note:** It's safe to use a `+` sign after the major version number. There won't be any backwards incompatible changes within the same version number. If such a change is to happen, major version number will be incremented and this file will be updated. This means that you can safely use the `+` sign without having to worry about your builds breaking.
 
-###Set the error by HTTP Status Code
+### Set the error by HTTP Status Code
 You just need to pass your HTTP status code using `setError(int)` and ErrorView will show the associated error description for you.
 
-###Set the error manually
+### Set the error manually
 In order to set the title or the subtitle manually, you can make use of the `setTitle(String)`, `setTitle(int)`, `setSubtitle(String)`, and `setSubtitle(int)` methods.
 
-###Configs
+### Configs
 Configs are like packages that hold the ErrorView state. You can use configs to define a very common error and reuse it all around your app.
 
 ```java
@@ -31,7 +31,7 @@ Configs are like packages that hold the ErrorView state. You can use configs to 
     mErrorView.getConfig();
 ```
 
-####Defining a Config
+#### Defining a Config
 ```java
     ErrorView.Config.create()
             .image(int)
@@ -47,13 +47,13 @@ Configs are like packages that hold the ErrorView state. You can use configs to 
             .build();
 ```
 
-###Catch Retry Events
+### Catch Retry Events
 To catch retry events, you can make use of the `setOnRetryListener(RetryListener)` method.
 
-###More Methods
+### More Methods
 Check out the [source code](../master/library/src/main/java/tr/xip/errorview/ErrorView.java) for other methods and their explanations.
 
-###XML Attributes
+### XML Attributes
 ```xml
 <tr.xip.errorview.ErrorView xmlns:errorview="http://schemas.android.com/apk/res-auto"
     android:id="@+id/error_view"
@@ -72,16 +72,16 @@ Check out the [source code](../master/library/src/main/java/tr/xip/errorview/Err
     errorview:ev_retryButtonTextColor="@color/..." />
 ```
 
-#Sample App
+# Sample App
 <a href="https://play.google.com/store/apps/details?id=tr.xip.errorview.sample">
 <img alt="Get it on Google Play"
 src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" />
 </a>
 
-#Apps using ErrorView
+# Apps using ErrorView
 Check out [this](https://github.com/xiprox/ErrorView/wiki/Apps-using-ErrorView) wiki page for the list of apps using ErrorView. If you are using ErrorView in your app, please take a moment to add your app to the list. I really appreciate it.
 
-#License
+# License
 ```
 Copyright (C) 2015 Ihsan Isik
 
